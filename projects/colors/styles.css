@@ -1,0 +1,106 @@
+body {
+	padding: 0; 
+	margin: 0; 
+
+}
+
+.centered {
+	top: 65%;
+  width: auto;
+	height: 120px;
+  position: relative;
+	margin-right: 20px;
+	margin-left:20px;
+	color: rgb(31,31,31);
+}
+
+.color-item {
+	height: 30%;
+	width:auto;
+	display:flex;
+	text-align: center;
+	vertical-align: middle;
+	opacity: 0.3;
+	z-index: 2;
+	line-height: 50%;
+  align-items : center;
+	justify-content: center;
+	font-size: 150%;
+}
+
+.color-item:hover {
+    opacity: 0.9!important;
+}
+
+#holder {
+	width:auto;
+	height:100vh;
+
+}
+
+#defaultCanvas0 {
+	z-index: 1;
+}
+
+#color1 {
+  cursor: pointer;
+  float: left;
+  height: 100%;
+  width: 20%;
+	z-index: -1;
+  position: absolute;
+  text-align: center;
+  transition: background .1s ease-in-out,box-shadow .1s ease-in-out; 
+
+}
+
+
+#color2 {
+	cursor: pointer;
+  float: left;
+  height: 100%;
+  width: 20%;
+	left:20%;
+	z-index: -1;
+  position: absolute;
+  text-align: center;
+  transition: background .1s ease-in-out,box-shadow .1s ease-in-out; 
+
+
+}
+
+#color3 {
+	cursor: pointer;
+  float: left;
+  height: 100%;
+  width: 20%;
+	left:40%;
+	z-index: -1;
+  position: absolute;
+  text-align: center;
+  transition: background .1s ease-in-out,box-shadow .1s ease-in-out; 
+}
+
+#color4 {
+	cursor: pointer;
+  float: left;
+  height: 100%;
+  width: 20%;
+	left:60%;
+	z-index: -1;
+  position: absolute;
+  text-align: center;
+  transition: background .1s ease-in-out,box-shadow .1s ease-in-out; 
+}
+
+#color5 {
+	cursor: pointer;
+  float: left;
+  height: 100%;
+  width: 20%;
+	left:80%;
+	z-index: -1;
+  position: absolute;
+  text-align: center;
+  transition: background .1s ease-in-out,box-shadow .1s ease-in-out; 
+}

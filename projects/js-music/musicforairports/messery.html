@@ -1,0 +1,91 @@
+<div class="airports-visualization">
+  <div class="airports-track airports-track-1">
+    <div class="airports-block airports-block-a"></div>
+    <div class="airports-block airports-block-b"></div>
+  </div>
+  <div class="airports-track airports-track-2">
+    <div class="airports-block airports-block-a"></div>
+    <div class="airports-block airports-block-b"></div>
+  </div>
+  <div class="airports-track airports-track-3">
+    <div class="airports-block airports-block-a"></div>
+    <div class="airports-block airports-block-b"></div>
+  </div>
+  <div class="airports-track airports-track-4">
+    <div class="airports-block airports-block-a"></div>
+    <div class="airports-block airports-block-b"></div>
+  </div>
+  <div class="airports-track airports-track-5">
+    <div class="airports-block airports-block-a"></div>
+    <div class="airports-block airports-block-b"></div>
+  </div>
+  <div class="airports-track airports-track-6">
+    <div class="airports-block airports-block-a"></div>
+    <div class="airports-block airports-block-b"></div>
+  </div>
+  <div class="airports-track airports-track-7">
+    <div class="airports-block airports-block-a"></div>
+    <div class="airports-block airports-block-b"></div>
+  </div>
+</div>
+
+<style type="text/css">
+  @keyframes shifttrack {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .airports-visualization {
+    overflow: hidden;
+    margin-bottom: 1em;
+  }
+  .airports-track {
+    position: relative;
+    width: 200%;
+    margin: 5px 0;
+    background-color: #eee;
+    height: 15px;
+  }
+  .airports-track-1 {
+    animation: shifttrack 30s linear 0s infinite;
+  }
+  .airports-track-2 {
+    animation: shifttrack 32s linear 0s infinite;
+  }
+  .airports-track-3 {
+    animation: shifttrack 27s linear 0s infinite;
+  }
+  .airports-track-4 {
+    animation: shifttrack 25s linear 0s infinite;
+  }
+  .airports-track-5 {
+    animation: shifttrack 36s linear 0s infinite;
+  }
+  .airports-track-6 {
+    animation: shifttrack 31s linear 0s infinite;
+  }
+  .airports-track-7 {
+    animation: shifttrack 25s linear 0s infinite;
+  }
+  .airports-block {
+    position: absolute;
+    width: 10%;
+    height: 15px;
+    background-color: rgb(237,20,111);
+  }
+</style>
+
+<script>
+function initAirportsVis() {
+  var width = document.documentElement.offsetWidth;
+  [1, 2, 3, 4, 5, 6, 7].forEach(function(n) {
+    var track = document.querySelector('.airports-track-' + n);
+    var blockA = track.querySelector('.airports-block-a');
+    var blockB = track.querySelector('.airports-block-b');
+    var left = Math.random() * width * 0.9;
+    blockA.style.left = left + 'px';
+    blockB.style.left = (width + left) + 'px';
+  });
+}
+initAirportsVis();
+window.addEventListener('resize', initAirportsVis);
+</script>
